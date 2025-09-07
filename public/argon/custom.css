@@ -1,0 +1,32 @@
+/* Custom overrides for dark gray theme */
+@import "tailwindcss";
+body { color: #fff; }
+/* Buttons */
+.btn-slate { background-color: #334155; color: #fff; }
+.btn-slate:hover { background-color: #475569; }
+.btn-gap > * + * { margin-left: .5rem; }
+
+/* Ensure color utilities on containers cascade to headings */
+h1, h2, h3, h4, h5, h6 { color: inherit; }
+
+/* Make native select dropdown options readable */
+/* Closed <select> keeps its own color; only opened list items are affected */
+/* Dark dropdown menu */
+select, select option, select optgroup {
+  color: #fff !important;
+  background-color: #1e293b !important; /* slate-800 */
+  border: none;
+}
+
+/* Optional: biar waktu hover tetap kebaca */
+select option:hover {
+  background-color: #334155 !important; /* slate-700 */
+}
+
+select option:checked {
+  background-color: #475569 !important; /* slate-600 */
+}
+
+
+/* Card dark helper (in case) */
+.card-dark { background-color: #0f172a; color: #e2e8f0; border-color: #1f2937; }
